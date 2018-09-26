@@ -1,0 +1,46 @@
+<section id="projektai">
+    <div class="container">
+        <h2>{{project.title}}</h2>
+        <div class="project-wrap">
+            <div class="project-content">
+                <img class='project-primary-img' src="{{project.image}}">
+                <div class="project-logos">
+                    <img class='project-logo-img' src="{{project.logoOne}}">
+                    <img class='project-logo-img' src="{{project.logoTwo}}">
+                </div>
+                <div class="project-single-details">
+                    <h4>Number</h4>
+                    <p>{{project.number}}</p>
+
+                    <h4>Duration</h4>
+                    <p>{{project.duration}}</p>
+
+                    <h4>Partners</h4>
+                    <p>{{{project.partners}}}</p>
+
+                    {{#if project.completed}}
+                    <h4><i class="fas fa-check"></i> Įgyvendintas</h4>
+                    {{/if}}
+                </div>
+
+                {{#if user}}
+                <div class="project-logos">
+                    <a href="/projects/edit/{{project.id}}" class="project-edit">Redaguoti</a>
+                    <form action="/projects/{{project.id}}?_method=DELETE" method="post">
+                        <input type="submit" value="Ištrinti" class="project-delete">
+                    </form>
+                </div>
+                {{/if}}
+
+            </div>
+            <div class="project-body">
+                <p>
+                    {{{project.body}}}
+                </p>
+            </div>
+        </div>
+        <div>
+            <a class='back-btn' href="/projects">Rodyti visus projektus</a>
+        </div>
+    </div>
+</section>

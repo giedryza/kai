@@ -1,0 +1,23 @@
+<div class="form-wrap">
+    {{> _errors}}
+    {{> _msg}}
+
+    <h2>Registruotis</h2>
+    <form action="/users/register" method="post">
+        <p>
+            <label for="email">El. paštas</label>
+            <input type="email" name="email" value="{{email}}" required>
+        </p>
+        <p>
+            <label for="password">Slaptažodis</label>
+            <input type="password" name="password" required>
+        </p>
+        <p>
+            <label for="password2">Patvirtinti slaptažodį</label>
+            <input type="password" name="password2" required>
+        </p>
+        <p>
+            <button type="submit">prisijungti</button>
+        </p>
+    </form>
+</div>

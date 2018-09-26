@@ -1,0 +1,21 @@
+<nav>
+    <div class="container">
+        <a href="/">
+            <img src="/img/logo-kai.png" alt="Kūrybinės ateities idėjos">
+        </a>
+        <div class="btn-menu">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+        <ul>
+            <li><a href="/#apie">Apie Mus</a></li>
+            <li><a href="/projects">Projektai</a></li>
+            <li><a href="/#kontaktai">Kontaktai</a></li>
+            {{#if user}}
+            <li><a href="/projects/add"><i class="fas fa-plus"></i> Įkelti projektą</a></li>
+            <li><a href="/users/logout"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

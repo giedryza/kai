@@ -1,0 +1,19 @@
+<div class="form-wrap">
+    {{> _errors}}
+    {{> _msg}}
+
+    <h2>Prisijungti</h2>
+    <form action="/users/login" method="post">
+        <p>
+            <label for="email">El. paštas</label>
+            <input type="email" name="email" required>
+        </p>
+        <p>
+            <label for="password">Slaptažodis</label>
+            <input type="password" name="password" required>
+        </p>
+        <p>
+            <button type="submit">prisijungti</button>
+        </p>
+    </form>
+</div>

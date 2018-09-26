@@ -1,0 +1,49 @@
+<div class="form-wrap">
+    <h2>Pridėti Projektą</h2>
+
+    <form action="/projects" method="post">
+        <p>
+            <label for="title">Pavadinimas</label>
+            <input type="text" name="title" required>
+        </p>
+        <p>
+            <label for="number">Numeris</label>
+            <input type="text" name="number" required>
+        </p>
+        <p>
+            <label for="duration">Trukmė</label>
+            <input type="text" name="duration" required>
+        </p>
+        <p>
+            <label for="image">Nuotrauka</label>
+            <input type="text" name="image" required>
+        </p>
+        <p>
+            <label for="logoOne">Logotipas #1</label>
+            <select name='logoOne'>
+                <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
+                <option value="/img/logo-nord-plus.png">Nord Plus</option>
+                <option value="/img/logo-kai.png">KAI</option>
+            </select>
+        </p>
+        <p>
+            <label for="logoTwo">Logotipas #2</label>
+            <select name='logoTwo'>
+                <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
+                <option value="/img/logo-nord-plus.png">Nord Plus</option>
+                <option value="/img/logo-kai.png">KAI</option>
+            </select>
+        </p>
+        <p>
+            <label for="partners">Partneriai</label>
+            <textarea class="editor" name="partners"></textarea>
+        </p>
+        <p>
+            <label for="body">Aprašymas</label>
+            <textarea class="editor" name="body"></textarea>
+        </p>
+        <p>
+            <button type="submit">pridėti</button>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,468 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+    overflow: hidden;
+    height: 100%;
+}
+
+h2 {
+    padding: 1.5rem 0 0 1rem;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Button */
+
+.btn-menu {
+    float: right;
+    cursor: pointer;
+    margin: 0.75rem;
+    z-index: 1;
+    transition: all 0.4s ease-out;
+}
+
+.btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 5px;
+    background: #5d5d5d;
+    transition: all 0.4s ease-out;
+}
+
+.close {
+    transform: rotate(180deg);
+}
+.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.close .btn-line:nth-child(2) {
+    opacity: 0;
+}
+.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Nav */
+
+nav {
+    background: #e6ebef;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+}
+
+nav img {
+    width: 80px;
+    margin: 5px 0 0 16px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0.5rem 0;
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    color: #5d5d5d;
+    display: list-item;
+}
+
+nav li a:hover {
+    color: #fff;
+    background: #5d5d5d;
+}
+
+/* Pagrindinis */
+
+#pagrindinis {
+    background-color: #e6ebef;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    padding: 6rem 1rem 1rem 1rem;
+}
+
+#pagrindinis p {
+    padding: 1rem;
+}
+
+.header-wrap {
+    display: flex;
+    height: 600px;
+    background: url('/img/main_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.header-left {
+    width: 50%;
+    text-align: left;
+}
+
+.header-right {
+    width: 50%;
+    text-align: center;
+}
+
+.header-right img {
+    height: 100%;
+    padding-top: 1rem;
+}
+
+/* Apie */
+
+#apie h3 {
+    padding: 0.5rem;
+}
+
+#apie p {
+    font-size: 0.9rem;
+}
+
+#apie ul {
+    list-style: none;
+    text-align: center;
+    padding: 1.5rem 1rem 0 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+#apie img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+#apie li {
+    background: #e6ebef;
+    width: 31%;
+}
+
+#apie li div {
+    padding: 0rem 1rem 0.5rem 1rem;
+}
+
+/* Projektai */
+
+.project-wrap {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 2rem;
+    padding: 1rem;
+}
+
+.project-primary-img {
+    display: block;
+    width: 100%;
+}
+
+.project-logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5rem;
+    background-color: #e6ebef;
+    padding: 1rem;
+}
+
+.project-logo-img {
+    max-width: 85%;
+    margin: auto;
+}
+
+#projektai h2 {
+    padding: 1rem;
+}
+
+.project-content h4 {
+    margin-top: 0.5rem;
+}
+
+.project-content p {
+    margin-top: 0.1rem;
+}
+
+.project-content a {
+    color: #000;
+    text-decoration: none;
+}
+
+.project-content a:hover {
+    color: #5d5d5d;
+}
+
+.project-single-details {
+    background-color: #e6ebef;
+    padding: 0.5rem;
+}
+
+.back-btn {
+    display: block;
+    padding: 0.7rem;
+    margin: 1rem;
+    background: #5d5d5d;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.back-btn:hover,
+.back-btn:focus {
+    background: #000;
+}
+
+/* Kontaktai */
+
+#kontaktai {
+    background: #5d5d5d;
+    color: #fff;
+}
+
+#kontaktai ul {
+    list-style: none;
+    padding: 0 2rem 1rem 2rem;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#kontaktai li + li {
+    border-left: 1px dotted #fff;
+}
+
+#kontaktai li {
+    padding: 0.8rem 0;
+}
+
+#kontaktai a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#kontaktai a:hover {
+    text-decoration: underline;
+}
+
+/* Form */
+
+.ck-editor__editable {
+    min-height: 220px;
+}
+
+.form-wrap {
+    max-width: 750px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.form-wrap h2 {
+    padding: 0;
+}
+
+.form-wrap p {
+    margin: 0.5rem 0;
+}
+
+.form-wrap input,
+.form-wrap textarea,
+.form-wrap select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.form-wrap #completed {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.form-wrap button {
+    width: 100%;
+    padding: 1rem;
+    background: #5d5d5d;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.form-wrap button:hover,
+.form-wrap button:focus {
+    background: #000;
+}
+
+.error_msg {
+    background: #ff0000;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.1rem;
+}
+
+.success_msg {
+    background: #008000;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.2rem;
+}
+
+.project-edit {
+    background-color: #008000;
+    color: #fff;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.project-delete {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    height: auto;
+    cursor: pointer;
+}
+
+.project-edit:hover,
+.project-delete:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 2.5rem;
+        padding-top: 9rem;
+    }
+    .header-wrap {
+        position: relative;
+        height: 450px;
+        background: none;
+    }
+    .header-left {
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+    }
+    .header-right {
+        height: 100%;
+        width: 100%;
+        opacity: 0.3;
+        position: absolute;
+        z-index: 1;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 780px) {
+    h2 {
+        text-align: center;
+    }
+
+    nav ul {
+        float: none;
+        position: fixed;
+        right: 0;
+        width: 100%;
+        background: #000;
+        opacity: 0.9;
+        height: 100vh;
+        transform: translate(100%);
+    }
+    .show {
+        transform: translate(0);
+    }
+    .activate {
+        transition: transform 0.4s;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 1em;
+    }
+    nav ul li a {
+        font-size: 1.2rem;
+        font-weight: normal;
+        color: #fff;
+    }
+    nav ul li a:hover {
+        color: #000;
+        background: #fff;
+    }
+
+    #apie ul {
+        display: block;
+    }
+    #apie li {
+        width: auto;
+        margin: 1rem;
+    }
+
+    .project-wrap {
+        grid-template-columns: 1fr;
+    }
+    .project-body p {
+        padding-top: 1rem;
+    }
+
+    #kontaktai ul {
+        grid-template-columns: 1fr;
+    }
+    #kontaktai li {
+        padding-bottom: 1rem;
+    }
+    #kontaktai li + li {
+        border-left: none;
+    }
+}
+
+@media (min-width: 781px) {
+    .btn-menu {
+        display: none;
+    }
+}
