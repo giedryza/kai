@@ -60,7 +60,7 @@ app.use(methodOverride('_method'));
 // Express Session Middleware
 app.use(
     session({
-        secret: 'kuryba',
+        secret: keys.secret,
         resave: true,
         saveUninitialized: true
     })
