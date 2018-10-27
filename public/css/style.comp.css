@@ -53,11 +53,20 @@ body {
     background-position: center;
     height: 23rem; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, rgba(255, 239, 95, 0.4), rgba(255, 239, 95, 0.4)), url(../img/apie_jaunimui.jpg); }
+      background-image: linear-gradient(to bottom, rgba(255, 239, 95, 0.4), rgba(255, 239, 95, 0.4)), url(../img/apie__jaunimui--small.jpg); }
+      @media (min-resolution: 192dpi) {
+        .card__picture--1 {
+          background-image: linear-gradient(to bottom, rgba(255, 239, 95, 0.4), rgba(255, 239, 95, 0.4)), url(../img/apie__jaunimui--big.jpg); } }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, rgba(108, 220, 255, 0.4), rgba(108, 220, 255, 0.4)), url(../img/apie_mokymai.jpg); }
+      background-image: linear-gradient(to bottom, rgba(108, 220, 255, 0.4), rgba(108, 220, 255, 0.4)), url(../img/apie__mokymai--small.jpg); }
+      @media (min-resolution: 192dpi) {
+        .card__picture--2 {
+          background-image: linear-gradient(to bottom, rgba(108, 220, 255, 0.4), rgba(108, 220, 255, 0.4)), url(../img/apie__mokymai--big.jpg); } }
     .card__picture--3 {
-      background-image: linear-gradient(to right, rgba(246, 43, 5, 0.4), rgba(246, 43, 5, 0.4)), url(../img/apie_organizuojame.jpg); }
+      background-image: linear-gradient(to bottom, rgba(246, 43, 5, 0.4), rgba(246, 43, 5, 0.4)), url(../img/apie__organizuojame--small.jpg); }
+      @media (min-resolution: 192dpi) {
+        .card__picture--3 {
+          background-image: linear-gradient(to bottom, rgba(246, 43, 5, 0.4), rgba(246, 43, 5, 0.4)), url(../img/apie__organizuojame--big.jpg); } }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 400;
