@@ -1,0 +1,97 @@
+.about {
+    @include container;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5rem;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-template-columns: minmax(min-content, 60rem);
+            justify-content: center;
+        }
+    }
+}
+
+.card {
+    @include boxShadow;
+
+    background-color: $color-grey-light;
+    position: relative;
+
+    &__picture {
+        background-size: cover;
+        background-position: center;
+        height: 23rem;
+
+        &--1 {
+            background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-multi-1, 0.4),
+                    rgba($color-multi-1, 0.4)
+                ),
+                url(../img/apie_jaunimui.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-multi-2, 0.4),
+                    rgba($color-multi-2, 0.4)
+                ),
+                url(../img/apie_mokymai.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                    to right,
+                    rgba($color-multi-3, 0.4),
+                    rgba($color-multi-3, 0.4)
+                ),
+                url(../img/apie_organizuojame.jpg);
+        }
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 20.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+
+        &--1 {
+            background-image: linear-gradient(
+                to bottom,
+                rgba($color-multi-1, 0.8),
+                darken(rgba($color-multi-1, 0.8), 30%)
+            );
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to bottom,
+                rgba($color-multi-2, 0.8),
+                darken(rgba($color-multi-2, 0.8), 30%)
+            );
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to bottom,
+                rgba($color-multi-3, 0.8),
+                darken(rgba($color-multi-3, 0.8), 30%)
+            );
+        }
+    }
+    &__content {
+        padding: 4rem 2rem 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+    }
+}

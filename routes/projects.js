@@ -76,7 +76,7 @@ router.get('/:id', (req, res) => {
 router.post('/', isAuthenticated, (req, res) => {
     new Project(req.body).save().then(project => {
         req.flash('success_msg', 'Projektas įkeltas');
-        res.redirect('/projects');
+        res.redirect('/');
     });
 });
 
@@ -114,7 +114,7 @@ router.put('/:id', isAuthenticated, (req, res) => {
 
                 project.save().then(project => {
                     req.flash('success_msg', 'Projektas atnaujintas');
-                    res.redirect('/projects');
+                    res.redirect('/');
                 });
             }
         })
@@ -139,7 +139,7 @@ router.delete('/:id', isAuthenticated, (req, res) => {
                 return res.status(404).send();
             } else {
                 req.flash('success_msg', 'Projektas ištrintas');
-                res.redirect('/projects');
+                res.redirect('/');
             }
         })
         .catch(e => {

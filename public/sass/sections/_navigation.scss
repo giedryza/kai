@@ -1,0 +1,51 @@
+.navigation {
+    background-color: $color-grey-light;
+
+    &__container {
+        @include container;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
+    }
+
+    &__logo {
+        &--link {
+        }
+
+        &--img {
+            width: 8rem;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 1.5rem;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($color-grey-light, 4%);
+            cursor: pointer;
+        }
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $color-grey-dark;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+}

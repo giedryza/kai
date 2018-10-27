@@ -1,46 +1,52 @@
-<section id="projektai">
-    <div class="container">
-        <h2>{{project.title}}</h2>
-        <div class="project-wrap">
-            <div class="project-content">
-                <img class='project-primary-img' src="{{project.image}}">
-                <div class="project-logos">
-                    <img class='project-logo-img' src="{{project.logoOne}}">
-                    <img class='project-logo-img' src="{{project.logoTwo}}">
-                </div>
-                <div class="project-single-details">
-                    <h4>Number</h4>
-                    <p>{{project.number}}</p>
+<section class="projects" id="projects">
+    <h2 class="heading-2">{{project.title}}</h2>
 
-                    <h4>Duration</h4>
-                    <p>{{project.duration}}</p>
+    {{> _msg}}
 
-                    <h4>Partners</h4>
-                    <p>{{{project.partners}}}</p>
-
-                    {{#if project.completed}}
-                    <h4><i class="fas fa-check"></i> Įgyvendintas</h4>
-                    {{/if}}
-                </div>
-
-                {{#if user}}
-                <div class="project-logos">
-                    <a href="/projects/edit/{{project.id}}" class="project-edit">Redaguoti</a>
-                    <form action="/projects/{{project.id}}?_method=DELETE" method="post">
-                        <input type="submit" value="Ištrinti" class="project-delete">
-                    </form>
-                </div>
-                {{/if}}
-
+    <div class="project">
+        <div class="project__visuals">
+            <img src="{{project.image}}" alt="Project image" class="project__img">
+            <div class="project__logo">
+                <img src="{{project.logoOne}}" alt="Project logo" class="project__logo--1">
+                <img src="{{project.logoTwo}}" alt="Project logo" class="project__logo--2">
             </div>
-            <div class="project-body">
-                <p>
-                    {{{project.body}}}
-                </p>
+
+            {{#if user}}
+            <div class="project__buttons">
+                <a class="form__submit" href="/projects/edit/{{project.id}}">Redaguoti</a>
+                <form action="/projects/{{project.id}}?_method=DELETE" method="post">
+                    <input class="form__submit" type="submit" value="Ištrinti">
+                </form>
             </div>
+            {{/if}}
+
+            {{#if project.completed}}
+            <div class="project__completed">
+                <svg class="project__icon">
+                    <use xlink:href="/img/symbol-defs.svg#icon-bookmark"></use>
+                </svg>
+                <h5 class="project__heading">
+                    Įgyvendintas
+                </h5>
+            </div>
+            {{/if}}
+
         </div>
-        <div>
-            <a class='back-btn' href="/projects">Rodyti visus projektus</a>
+        <div class="project__details">
+            <h5 class="project__heading">Number</h5>
+            <p class="project__info">{{project.number}}</p>
+            <h5 class="project__heading">Duration</h5>
+            <p class="project__info">{{project.duration}}</p>
+            <h5 class="project__heading">Partners</h5>
+            <div class="project__info">{{{project.partners}}}</div>
+            <h5 class="project__heading project__heading--summary">Summary</h5>
+            <div class="project__info">{{{project.body}}}</div>
+
+            <div>
+                <a class='project__back form__submit' href="/">Atgal</a>
+            </div>
+
         </div>
     </div>
+
 </section>

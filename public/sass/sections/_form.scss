@@ -1,0 +1,74 @@
+.form {
+    &__container {
+        max-width: 75rem;
+        margin: auto;
+        padding: 1rem;
+    }
+
+    &__group {
+        margin: 1.5rem 0;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        font-family: inherit;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    label {
+        font-size: 1.8rem;
+    }
+
+    #completed {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    &__submit {
+        width: 100%;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1;
+        text-align: center;
+        padding: 1rem;
+        background: $color-grey-light;
+        border: none;
+        color: $color-black;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover,
+        &:active {
+            background-color: darken($color-grey-light, 10%);
+        }
+    }
+}
+
+.ck-editor__editable {
+    min-height: 220px;
+    font-size: 1.7rem;
+}
+
+.msg {
+    @include container;
+
+    font-size: 1.6rem;
+    color: $color-white;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    &--success {
+        background: #008000;
+    }
+
+    &--error {
+        background: #ff0000;
+    }
+}

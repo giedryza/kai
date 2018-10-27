@@ -1,55 +1,58 @@
-<div class="form-wrap">
-    <h2>Redaguoti Projektą</h2>
+<section class="form">
+    <div class="form__container">
+        <h2 class="heading-2">Redaguoti projektą</h2>
 
-    <form action="/projects/{{project.id}}?_method=PUT" method="post">
-        <p>
-            <label for="title">Pavadinimas</label>
-            <input type="text" name="title" value="{{project.title}}" required>
-        </p>
-        <p>
-            <label for="number">Numeris</label>
-            <input type="text" name="number" value="{{project.number}}" required>
-        </p>
-        <p>
-            <label for="duration">Trukmė</label>
-            <input type="text" name="duration" value="{{project.duration}}" required>
-        </p>
-        <p>
-            <label for="image">Nuotrauka</label>
-            <input type="text" name="image" value="{{project.image}}" required>
-        </p>
-        <p>
-            <label for="logoOne">Logotipas #1</label>
-            <select name='logoOne'>
-                {{#select project.logoOne}}
-                <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
-                <option value="/img/logo-nord-plus.png">Nord Plus</option>
-                <option value="/img/logo-kai.png">KAI</option>
-                {{/select}}
-            </select>
-        </p>
-        <p>
-            <label for="logoTwo">Logotipas #2</label>
-            <select name='logoTwo'>
-                {{#select project.logoTwo}}
-                <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
-                <option value="/img/logo-nord-plus.png">Nord Plus</option>
-                <option value="/img/logo-kai.png">KAI</option>
-                {{/select}}
-            </select>
-        </p>
-        <p>
-            <label for="partners">Partneriai</label>
-            <textarea class="editor" name="partners">{{project.partners}} </textarea>
-        </p>
-        <p>
-            <label for="body">Aprašymas</label>
-            <textarea class="editor" name="body">{{project.body}}</textarea>
-        </p>
-        <p>
-            <input type="checkbox" name="completed" id="completed" {{#if project.completed}} checked="checked" {{/if}}>
-            <label for="completed">Įgyvendintas</label>
-        </p>
-        <button type="submit">patvirtinti</button>
-    </form>
-</div>
+        <form action="/projects/{{project.id}}?_method=PUT" method="post">
+            <div class="form__group">
+                <label for="title">Pavadinimas</label>
+                <input type="text" name="title" value="{{project.title}}" required>
+            </div>
+            <div class="form__group">
+                <label for="number">Numeris</label>
+                <input type="text" name="number" value="{{project.number}}" required>
+            </div>
+            <div class="form__group">
+                <label for="duration">Trukmė</label>
+                <input type="text" name="duration" value="{{project.duration}}" required>
+            </div>
+            <div class="form__group">
+                <label for="image">Nuotrauka</label>
+                <input type="text" name="image" value="{{project.image}}" required>
+            </div>
+            <div class="form__group">
+                <label for="logoOne">Logotipas #1</label>
+                <select name='logoOne'>
+                    {{#select project.logoOne}}
+                    <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
+                    <option value="/img/logo-nord-plus.png">Nord Plus</option>
+                    <option value="/img/logo-kai.png">KAI</option>
+                    {{/select}}
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="logoTwo">Logotipas #2</label>
+                <select name='logoTwo'>
+                    {{#select project.logoTwo}}
+                    <option value="/img/logo-erasmus-plus.png" selected>Erasmus+</option>
+                    <option value="/img/logo-nord-plus.png">Nord Plus</option>
+                    <option value="/img/logo-kai.png">KAI</option>
+                    {{/select}}
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="partners">Partneriai</label>
+                <textarea class="editor" name="partners">{{project.partners}} </textarea>
+            </div>
+            <div class="form__group">
+                <label for="body">Aprašymas</label>
+                <textarea class="editor" name="body">{{project.body}}</textarea>
+            </div>
+            <div class="form__group">
+                <input type="checkbox" name="completed" id="completed" {{#if project.completed}} checked="checked"
+                    {{/if}}>
+                <label for="completed">Įgyvendintas</label>
+            </div>
+            <button class="form__submit" type="submit">patvirtinti</button>
+        </form>
+    </div>
+</section>

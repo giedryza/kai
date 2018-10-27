@@ -1,0 +1,16 @@
+@mixin container {
+    width: 95%;
+    max-width: 114rem;
+    margin: auto;
+}
+
+@mixin boxShadow {
+    border-radius: 5px;
+    box-shadow: 0 0.5rem 3rem rgba($color-black, 0.25);
+    overflow: hidden;
+}
+
+@mixin noBoxShadow {
+    border-radius: 0;
+    box-shadow: none;
+}

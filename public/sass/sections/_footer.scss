@@ -1,0 +1,71 @@
+.footer {
+    background-color: $color-grey-light;
+
+    &__container {
+        @include container;
+    }
+
+    &__logo-box {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 20rem;
+        margin: 3rem;
+    }
+
+    &__contacts {
+        color: $color-grey-dark;
+        list-style: none;
+        font-size: 1.8rem;
+        font-weight: 400;
+        padding: 5rem;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    &__logo-text {
+        font-size: 1.7rem;
+        color: darken($color-grey-light, 25%);
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-gap: 1.5rem;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: '';
+            height: 1px;
+            display: block;
+            background-color: currentColor;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+        fill: currentColor;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: currentColor;
+            text-decoration: none;
+        }
+        &:hover,
+        &:active {
+            text-decoration: underline;
+        }
+    }
+}

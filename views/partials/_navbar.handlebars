@@ -1,21 +1,14 @@
-<nav>
-    <div class="container">
-        <a href="/">
-            <img src="/img/logo-kai.png" alt="Kūrybinės ateities idėjos">
-        </a>
-        <div class="btn-menu">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
+<nav class="navigation">
+    <div class="navigation__container">
+        <div class="navigation__logo">
+            <a class="navigation__logo--link" href="/">
+                <img class="navigation__logo--img" src="/img/logo-kai.png" alt="Kūrybinės ateities idėjos">
+            </a>
         </div>
-        <ul>
-            <li><a href="/#apie">Apie Mus</a></li>
-            <li><a href="/projects">Projektai</a></li>
-            <li><a href="/#kontaktai">Kontaktai</a></li>
-            {{#if user}}
-            <li><a href="/projects/add"><i class="fas fa-plus"></i> Įkelti projektą</a></li>
-            <li><a href="/users/logout"><i class="fas fa-sign-out-alt"></i> Atsijungti</a></li>
-            {{/if}}
+        <ul class="navigation__list">
+            <li class="navigation__item"><a href="/#about" class="navigation__link">Apie Mus</a></li>
+            <li class="navigation__item"><a href="/#projects" class="navigation__link">Projektai</a></li>
+            <li class="navigation__item"><a href="/#contacts" class="navigation__link">Kontaktai</a></li>
         </ul>
     </div>
 </nav>
