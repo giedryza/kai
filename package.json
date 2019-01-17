@@ -1,9 +1,6 @@
 {
     "name": "kurybines-ateities-idejos",
     "version": "1.0.0",
-    "engines": {
-        "node": "10.8.0"
-    },
     "description": "",
     "main": "app.js",
     "scripts": {
