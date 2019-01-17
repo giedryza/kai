@@ -11,7 +11,7 @@ html {
   @media only screen and (max-width: 68.75em) {
     html {
       font-size: 56.25%; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 41em) {
     html {
       font-size: 50%; } }
 
@@ -208,7 +208,7 @@ body {
     background-repeat: no-repeat;
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 41em) {
       .header__container {
         grid-template-columns: 1fr; } }
   .header__text-box {
@@ -216,7 +216,7 @@ body {
     color: #333;
     align-self: center;
     z-index: 1; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 41em) {
       .header__text-box {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -236,7 +236,7 @@ body {
   .header__img-box {
     justify-self: end;
     overflow: hidden; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 41em) {
       .header__img-box {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -255,7 +255,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 41em) {
       .navigation__container {
         flex-direction: column; } }
   .navigation__logo--img {

@@ -13,11 +13,6 @@ router.get('/login', (req, res) => {
     res.render('users/login');
 });
 
-// User Register Route
-router.get('/register', (req, res) => {
-    res.render('users/register');
-});
-
 // Login Form POST
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
@@ -27,58 +22,63 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
-// Register Form POST
-router.post('/register', (req, res) => {
-    let errors = [];
+// User Register Route
+// router.get('/register', (req, res) => {
+//     res.render('users/register');
+// });
 
-    if (req.body.password != req.body.password2) {
-        errors.push({ text: 'Slaptažodžiai nesutampa' });
-    }
-    if (req.body.password.length < 6) {
-        errors.push({
-            text: 'Slaptažodis turi būti ne trumpesnis kaip 6 simboliai'
-        });
-    }
-    if (errors.length > 0) {
-        res.render('users/register', {
-            errors: errors,
-            email: req.body.email
-        });
-    } else {
-        User.findOne({ email: req.body.email }).then(user => {
-            if (user) {
-                req.flash(
-                    'error_msg',
-                    'Šis el. pašto adresas jau užregistruotas'
-                );
-                res.redirect('/users/register');
-            } else {
-                const newUser = new User({
-                    email: req.body.email,
-                    password: req.body.password
-                });
-                bcrypt.genSalt(12, (err, salt) => {
-                    bcrypt.hash(newUser.password, salt, (err, hash) => {
-                        if (err) throw err;
-                        newUser.password = hash;
-                        newUser
-                            .save()
-                            .then(user => {
-                                req.flash(
-                                    'success_msg',
-                                    'Registracija sėkminga'
-                                );
-                                res.redirect('/users/login');
-                            })
-                            .catch(e => {
-                                res.status(400).send();
-                            });
-                    });
-                });
-            }
-        });
-    }
-});
+// Register Form POST
+// router.post('/register', (req, res) => {
+//     let errors = [];
+
+//     if (req.body.password != req.body.password2) {
+//         errors.push({ text: 'Slaptažodžiai nesutampa' });
+//     }
+//     if (req.body.password.length < 6) {
+//         errors.push({
+//             text: 'Slaptažodis turi būti ne trumpesnis kaip 6 simboliai'
+//         });
+//     }
+//     if (errors.length > 0) {
+//         res.render('users/register', {
+//             errors: errors,
+//             email: req.body.email
+//         });
+//     } else {
+//         User.findOne({ email: req.body.email }).then(user => {
+//             if (user) {
+//                 req.flash(
+//                     'error_msg',
+//                     'Šis el. pašto adresas jau užregistruotas'
+//                 );
+//                 res.redirect('/users/register');
+//             } else {
+//                 const newUser = new User({
+//                     email: req.body.email,
+//                     password: req.body.password
+//                 });
+//                 bcrypt.genSalt(12, (err, salt) => {
+//                     bcrypt.hash(newUser.password, salt, (err, hash) => {
+//                         if (err) throw err;
+//                         newUser.password = hash;
+//                         newUser
+//                             .save()
+//                             .then(user => {
+//                                 req.flash(
+//                                     'success_msg',
+//                                     'Registracija sėkminga'
+//                                 );
+//                                 res.redirect('/users/login');
+//                             })
+//                             .catch(e => {
+//                                 res.status(400).send();
+//                             });
+//                     });
+//                 });
+//             }
+//         });
+//     }
+// });
 
 // Logout User
 router.get('/logout', (req, res) => {
