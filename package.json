@@ -11,7 +11,7 @@
     "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "KAI",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
